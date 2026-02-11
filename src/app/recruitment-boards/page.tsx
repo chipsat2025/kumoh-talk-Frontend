@@ -5,6 +5,8 @@ import Footer from '../components/common/footer/Footer';
 import Header from '../components/common/header/Header';
 import styles from './page.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 export default function Home({
   searchParams,
 }: {
@@ -15,9 +17,7 @@ export default function Home({
       <Header title='게시글' />
       <main className={styles.main}>
         <header>게시글</header>
-        <Suspense
-          fallback={<ArticleListSuspense searchParams={searchParams} />}
-        >
+        <Suspense fallback={<ArticleListSuspense searchParams={searchParams} />}>
           <ArticleList searchParams={searchParams} />
         </Suspense>
       </main>

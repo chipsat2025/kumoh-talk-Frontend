@@ -18,11 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: { id?: string };
-}) {
+export default async function Page({ searchParams }: { searchParams: { id?: string } }) {
+  // TODO: '/recruitment-board/draft/latest' 경로로 요청 보내서 최근 임시 저장 글 불러오기
   if (!cookies().get('accessToken')) {
     notFound();
   }
@@ -46,8 +43,7 @@ export default async function Page({
   if (searchParams.id) {
     const { data } = await getRecruitmentBoardInfo(searchParams.id);
     defaultValues = data;
-    defaultValues.recruitmentDeadline =
-      defaultValues.recruitmentDeadline.split('T')[0];
+    defaultValues.recruitmentDeadline = defaultValues.recruitmentDeadline.split('T')[0];
     defaultValues.activityStart = defaultValues.activityStart.split('T')[0];
     defaultValues.activityFinish = defaultValues.activityFinish.split('T')[0];
   }
