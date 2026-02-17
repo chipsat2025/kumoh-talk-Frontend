@@ -96,7 +96,8 @@ classDiagram
 - 
 #### 실시간 세미나 스트리밍 이미지
 
-<img width="984" height="418" alt="image" src="https://github.com/user-attachments/assets/ff0e2725-e6c5-4792-89d1-1bfac5ce7284" />
+<img width="1271" height="532" alt="image" src="https://github.com/user-attachments/assets/6ca1b3ba-d066-45cc-a04e-2c58c1161b47" />
+
 
 #### 채팅 이미지
 
